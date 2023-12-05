@@ -1,15 +1,14 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import MainContiner from './MainContainer'
+import { Outlet } from 'react-router-dom'
 
 const Body = () => {
   return (
     <div className="flex">
         <Sidebar/>
-        <MainContiner/>
-
+        <Outlet/>      
     </div>
   )
 }
 
-export default Body;
+export default Body
