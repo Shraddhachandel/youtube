@@ -8,7 +8,7 @@ import { YOUTUBE_SEARCH_API } from '../utils/constants';
 
 
 
-const Head = () => {
+  const Head = () => {
   const [searchQuery, setSaerchQuery] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
@@ -79,4 +79,4 @@ const Head = () => {
   )
 }
 
-export default Head
+export default Head;
