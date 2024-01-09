@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { closeMenu } from '../utils/appSlice';
 import {useSearchParams} from 'react-router-dom'
+import CommentsContainer from './CommentsContainer'
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -11,10 +12,11 @@ const WatchPage = () => {
     dispatch(closeMenu())
   },[]);
   return (
-    <div className="px-5">
+    <div>
+    <div className="px-5 ml-5 mr*2 ">
       <iframe
-        width="800"
-        height="500"
+        width="1500"
+        height="700"
         src={"https://www.youtube.com/embed/" + searchParams.get("v")}
         title="YouTube video player"
         frameBorder="0"
@@ -22,7 +24,9 @@ const WatchPage = () => {
         allowFullScreen
       ></iframe>
     </div>
+    <CommentsContainer/>
+    </div>
   )
 }
 
-export default WatchPage
+export default WatchPage;
